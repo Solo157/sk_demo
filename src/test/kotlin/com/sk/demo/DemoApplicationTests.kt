@@ -1,7 +1,7 @@
 package com.sk.demo
 
 import com.sk.demo.api.SKRequest
-import com.sk.demo.repository.CurrentNode
+import com.sk.demo.repository.CurrentJsonNode
 import com.sk.demo.repository.SKExample
 import com.sk.demo.repository.SuperkassaRepository
 import com.sk.demo.service.SKService
@@ -25,7 +25,7 @@ class DemoApplicationTests {
 	fun skExample_currentValueIsZero_currentValueIncreasedForOneThousand() {
 		val threadCount = 1000
 		val latch = CountDownLatch(threadCount)
-		repository.save(SKExample(id = 1, obj = CurrentNode(0)))
+		repository.save(SKExample(id = 1, obj = CurrentJsonNode(0)))
 
 
 		for (i in 1..threadCount) {

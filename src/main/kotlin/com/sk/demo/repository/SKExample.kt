@@ -18,5 +18,5 @@ class SKExample(
 
     @Column(columnDefinition = "jsonb")
     @Type(JsonBinaryType::class)
-    var obj: CurrentNode
+    var obj: CurrentJsonNode
 )
