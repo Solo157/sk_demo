@@ -14,9 +14,9 @@ import org.hibernate.annotations.Type
 class SKExample(
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    val id: Int? = null,
+    val id: Int,
 
     @Column(columnDefinition = "jsonb")
     @Type(JsonBinaryType::class)
-    var obj: CurrentJsonNode
+    var obj: SKObj
 )

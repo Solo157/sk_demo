@@ -1,5 +1,5 @@
 package com.sk.demo.repository
 
-data class CurrentJsonNode (
+data class SKObj (
     var current: Int
 )

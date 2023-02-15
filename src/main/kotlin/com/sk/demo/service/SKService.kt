@@ -2,7 +2,6 @@ package com.sk.demo.service
 
 import com.sk.demo.api.SKResponse
 import com.sk.demo.api.SKRequest
-import com.sk.demo.repository.CurrentJsonNode
 import com.sk.demo.repository.SKExample
 import com.sk.demo.repository.SuperkassaRepository
 import org.springframework.data.repository.findByIdOrNull
