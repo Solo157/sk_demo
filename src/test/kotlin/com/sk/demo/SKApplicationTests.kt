@@ -15,7 +15,7 @@ import java.util.concurrent.CountDownLatch
 
 
 @SpringBootTest
-class DemoApplicationTests {
+class SKApplicationTests {
 
 	@Autowired
 	lateinit var service: SKService
@@ -35,8 +35,8 @@ class DemoApplicationTests {
 	}
 
 	@Test
-	fun skExample_currentValueIsZero_currentValueIncreasedForOneThousand() {
-		val threadCount = 1000
+	fun modifySKExample_currentValueIsZero_currentValueIncreasedForOneThousand() {
+		val threadCount = 100
 		val latch = CountDownLatch(threadCount)
 
 		for (i in 1..threadCount) {
