@@ -1,5 +1,6 @@
 package com.sk.demo.service
 
+import com.google.gson.Gson
 import com.sk.demo.api.SKResponse
 import com.sk.demo.api.SKRequest
 import com.sk.demo.repository.SKExample
@@ -21,5 +22,10 @@ class SKService (val repository: SuperkassaRepository) {
         )
 
     @Transactional
-    fun saveSKExample(skExample: SKExample) = repository.save(skExample)
+    fun saveSKExample(skExample: SKExample): SKExample {
+        val gson = Gson()
+        //val example = repository.save(skExample)
+        repository.executeUpdate(gson.toJson(skExample.obj))
+        return skExample
+    }
 }
